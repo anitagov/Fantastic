@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Building
-          command: g++ -o hello -c hello.cpp
+          command: gcc -o hello -c hello.cpp
       - run:
           name: List the output
           command: ls

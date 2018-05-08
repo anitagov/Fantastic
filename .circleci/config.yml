@@ -6,9 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: CPPGreeting
+          name: Building
           command: g++ -o hello -c hello.cpp
-          command: ./hello 
       - run:
-          name: Print the Current Time
-          command: date
+          name: List the output
+          command: ls
+          

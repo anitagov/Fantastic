@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: ubuntu:14.04
+      - image: eclipse/ubuntu_jdk8
     steps:
       - checkout
       - run:

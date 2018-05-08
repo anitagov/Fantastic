@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: Installing gcc
-          command: sudo apt-get install gcc
+          command: sudo apt-get install build-essential
       - run:
           name: Building
           command: gcc -o hello -c hello.cpp

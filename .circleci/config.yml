@@ -2,11 +2,13 @@ jobs:
   build:
     docker:
       - image: eclipse/ubuntu_jdk8
+      - image: eclipse/cpp_gcc
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, CircleCI.
+          name: CPPGreeting
+          command: g++ -o hello -c hello.cpp
+          command: ./hello 
       - run:
           name: Print the Current Time
           command: date

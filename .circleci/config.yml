@@ -2,9 +2,11 @@ jobs:
   build:
     docker:
       - image: eclipse/ubuntu_jdk8
-      - image: eclipse/cpp_gcc
     steps:
       - checkout
+      - run:
+          name: Installing gcc
+          command: sudo apt-get install gcc
       - run:
           name: Building
           command: gcc -o hello -c hello.cpp

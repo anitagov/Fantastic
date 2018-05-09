@@ -5,9 +5,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Building
-          command: g++ -o hello hello.cpp
-      - run:
-          name: Run the App
-          command: ./hello
+          name: Installing Tools
+          command: sudo ./scripts/install-tools
+ #     - run:
+  #        name: Building
+   #       command: g++ -o hello hello.cpp
+  #    - run:
+  #name: Run the App
+  #        command: ./hello
           

@@ -9,5 +9,5 @@ jobs:
           command: g++ -o hello hello.cpp
       - run:
           name: Run the App
-          command: hello
+          command: ./hello
           

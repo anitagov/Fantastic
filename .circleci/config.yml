@@ -1,13 +1,10 @@
 jobs:
   build:
     docker:
-      - image: ubuntu:16.04
+      - image: anitagov/ubuntu_gcc
     steps:
       - checkout
-      #- run:
-          #name: Installing Tools
-          #command: ./scripts/install-tools
       - run: | 
-          command: g++ -o hello hello.cpp &&
+          g++ -o hello hello.cpp &&
           ./hello
           

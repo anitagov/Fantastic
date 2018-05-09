@@ -8,6 +8,6 @@ jobs:
           name: Building
           command: g++ -o hello hello.cpp
       - run:
-          name: List the output
-          command: ls
+          name: Run the App
+          command: hello
           

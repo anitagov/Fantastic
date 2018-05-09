@@ -1,15 +1,12 @@
 jobs:
   build:
     docker:
-      - image: eclipse/ubuntu_jdk8
+      - image: eclipse/cpp_gcc
     steps:
       - checkout
       - run:
-          name: Installing gcc
-          command: sudo apt-get install build-essential
-      - run:
           name: Building
-          command: gcc -o hello -c hello.cpp
+          command: g++ -o hello hello.cpp
       - run:
           name: List the output
           command: ls

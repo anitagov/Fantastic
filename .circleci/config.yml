@@ -4,13 +4,10 @@ jobs:
       - image: ubuntu:16.04
     steps:
       - checkout
-      - run:
+      #- run:
           #name: Installing Tools
           #command: ./scripts/install-tools
-      - run:
-          name: Building
-          command: g++ -o hello hello.cpp
-      - run:
-          name: Run the App
-          command: ./hello
+      - run: | 
+          command: g++ -o hello hello.cpp &&
+          ./hello
           

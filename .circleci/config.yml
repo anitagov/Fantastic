@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: Installing Tools
-          command: sudo ./scripts/install-tools
+          command: ./scripts/install-tools
  #     - run:
   #        name: Building
    #       command: g++ -o hello hello.cpp

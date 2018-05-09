@@ -3,7 +3,7 @@
 # Install required packages.
 #
 #
-apt-get -y install update
+apt-get -y update
 apt-get -y install clang-format
 apt-get -y install cmake
 

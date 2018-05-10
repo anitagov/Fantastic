@@ -1,5 +1,7 @@
 jobs:
   build:
+    machine: true
+      image: circleci/classic:latest
     docker:
       - image: anitagov/ubuntu-gcc
     steps:

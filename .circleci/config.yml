@@ -1,7 +1,7 @@
 jobs:
   build:
     docker: 
-      image: anitagov/ubuntu-tools
+      - image: anitagov/ubuntu-tools
     steps:
       - checkout
       - run: | 

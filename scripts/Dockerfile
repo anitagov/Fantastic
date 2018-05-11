@@ -4,6 +4,7 @@ FROM ubuntu:16.04
 #ADD . /build
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
+    apt-get -y install git && \
     apt-get -y install clang-format && \
     apt-get -y install cmake && \
     apt-get -y install doxygen && \

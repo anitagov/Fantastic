@@ -4,7 +4,8 @@ jobs:
       - image: anitagov/ubuntu-tools
     steps:
       - checkout
-      - run: | 
+      - run: |
           cmake . &&
-          make
+          make &&
+          ./Fantastic 120
           

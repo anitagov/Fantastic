@@ -1,9 +1,18 @@
-#FROM ubuntu
-FROM anitagov/ubuntu-gcc
+FROM ubuntu:16.04
 # Create and set working directory to build
 #WORKDIR /build
 #ADD . /build
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-    ./scripts/install-tools && \
+    apt-get -y install clang-format && \
+    apt-get -y install cmake && \
+    apt-get -y install doxygen && \
+    apt-get -y install gawk && \
+    apt-get -y install gcc && \
+    apt-get -y install g++ && \
+    apt-get -y install libexpat1-dev && \
+    apt-get -y install libssl-dev && \
+    apt-get -y install make && \
+    apt-get -y install openssl && \
+    apt-get -y install subversion && \
     rm -rf /var/lib/apt/lists/*

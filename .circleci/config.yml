@@ -1,11 +1,10 @@
 jobs:
   build:
-    machine: 
-      enabled: true
-      image: circleci/classic:latest
+    docker: 
+      image: anitagov/ubuntu-tools
     steps:
       - checkout
       - run: | 
-          g++ -o hello hello.cpp &&
-          ./hello
+          cmake . &&
+          make
           

@@ -17,4 +17,4 @@ configure_file (
 # so that we will find FantasticConfig.h
 include_directories("${PROJECT_BINARY_DIR}")
 
-add_executable (Fantastic fantastic.cxx)
+add_executable (Fantastic Fantastic.cpp)

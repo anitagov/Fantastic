@@ -6,5 +6,5 @@ jobs:
       - checkout
       - run:
            name: Building Drivers
-           command: sudo ./scrips/install-tools
+           command: sudo ./scripts/install-tools
            

@@ -5,6 +5,6 @@ jobs:
     steps:
       - checkout
       - run: | 
-           make -C drivers &&
-	   make -C drivers install
-           
+           g++ -o hello hello.cpp &&
+	   ./hello
+	   

@@ -5,7 +5,10 @@ jobs:
     steps:
       - checkout
       - run: |
-          cmake . &&
-          make &&
-          ./Fantastic 120
+      	   sudo make -C drivers &&
+	   sudo make -C drivers install
+	   
+      #    cmake . &&
+      #    make &&
+      #    ./Fantastic 120
           

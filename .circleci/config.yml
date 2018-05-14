@@ -4,7 +4,6 @@ jobs:
       - image: anitagov/ubuntu-tools:1.1
     steps:
       - checkout
-      - run: | 
-           g++ -o hello hello.cpp &&
-	   ./hello
-	   
+      - run:
+           name: Building
+           command: g++ -o hello -c hello.cpp

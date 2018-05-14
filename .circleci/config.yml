@@ -4,7 +4,6 @@ jobs:
       - image: anitagov/ubuntu-tools:1.1
     steps:
       - checkout
-      - run:
-           name: Building Drivers
-           command: sudo ./scripts/install-tools
-           
+      - run: | 
+           apt-get -y install sudo &&
+           sudo ./scripts/install-tools

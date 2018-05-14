@@ -4,7 +4,7 @@ jobs:
       - image: anitagov/ubuntu-tools:1.1
     steps:
       - checkout
-      - run: |
-      	   sudo make -C drivers &&
-	   sudo make -C drivers install
+      - run: | 
+           make -C drivers &&
+	   make -C drivers install
            

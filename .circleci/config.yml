@@ -4,7 +4,6 @@ jobs:
       - image: anitagov/ubuntu-tools:1.1
     steps:
       - checkout
-      - git clone https://github.com/intel/linux-sgx.git
       - run: |
           cmake . &&
           make &&

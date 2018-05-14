@@ -7,8 +7,4 @@ jobs:
       - run: |
       	   sudo make -C drivers &&
 	   sudo make -C drivers install
-	   
-      #    cmake . &&
-      #    make &&
-      #    ./Fantastic 120
-          
+           

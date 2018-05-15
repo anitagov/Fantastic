@@ -6,6 +6,7 @@ jobs:
       - checkout
       - run: | 
           export SHELL=/bin/bash &&
+          export shell=/bin/bash &&
           apt-get -y update &&
           apt-get -y install sudo &&
           sudo make -C drivers &&

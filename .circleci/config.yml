@@ -5,4 +5,4 @@ jobs:
     steps:
       - checkout
       - run: 
-         command: apt-get -y update 
+         command: apt-get -y sudo

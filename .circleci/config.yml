@@ -5,6 +5,7 @@ jobs:
     steps:
       - checkout
       - run: | 
+          export SHELL=/bin/bash &&
           apt-get -y update &&
           apt-get -y install sudo &&
           sudo make -C drivers &&

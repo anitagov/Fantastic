@@ -4,7 +4,5 @@ jobs:
       - image: anitagov/ubuntu-tools:1.1
     steps:
       - checkout
-      - run: |
-         apt-get -y update &&
-	 apt-get -y install sudo
-	 
+      - run: 
+         command: apt-get -y update 

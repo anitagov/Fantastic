@@ -5,4 +5,4 @@ jobs:
     steps:
       - checkout
       - run: 
-         command: apt-get -y sudo
+         command: apt-get -y install sudo

@@ -1,9 +1,9 @@
 jobs:
   build:
     docker: 
-      - image: anitagov/ubuntu-tools:1.1
+      - image: anitagov/ubuntu-gcc
     steps:
       - checkout
-      - run: | 
-           apt-get -y install sudo &&
-           sudo ./scripts/install-tools
+      - run:
+         name: Installing tools
+         command: sudo ./scripts/install-tools

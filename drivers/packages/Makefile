@@ -5,6 +5,7 @@ INSTALL = apt-get -y install
 all: .packages
 
 .packages:
+	apt-get update
 	$(INSTALL) build-essential
 	$(INSTALL) ocaml
 	$(INSTALL) automake

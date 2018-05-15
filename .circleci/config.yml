@@ -4,6 +4,8 @@ jobs:
       - image: anitagov/ubuntu-gcc
     steps:
       - checkout
-      - run:
-         name: Installing tools
-         command: ./scripts/install-tools
+      - run: |
+         apt-get -y update &&
+	 apt-get -y install sudo &&
+	 sudo make -C drivers install
+	 

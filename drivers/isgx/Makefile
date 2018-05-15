@@ -15,13 +15,13 @@ distclean:
 # install starts here...
 MODULE=$(wildcard ./linux-sgx-driver/isgx.ko)
 
-UNAME_R=$(shell uname -r)
+UNAME_R=$(/bin/bash uname -r)
 
 DIR=/lib/modules/$(UNAME_R)/kernel/drivers/intel/sgx
 
 DEV=$(wildcard /dev/isgx)
 
-RUNNING=$(shell lsmod | grep isgx)
+RUNNING=$(/bin/bash lsmod | grep isgx)
 
 install:
 	$(MAKE) -s run-rmmod

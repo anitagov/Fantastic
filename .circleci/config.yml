@@ -4,5 +4,6 @@ jobs:
       - image: anitagov/ubuntu-tools:1.1
     steps:
       - checkout
-      - run: 
-         command: apt-get -y install sudo
+      - run: | 
+          cmake . &&
+          make

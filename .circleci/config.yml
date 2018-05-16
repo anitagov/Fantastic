@@ -9,6 +9,7 @@ jobs:
           export shell=/bin/bash &&
           apt-get -y update &&
           apt-get -y install sudo &&
-          apt-get -y install linux-generic
-          apt-get -y install kmod
-          sudo make -C drivers
+          apt-get -y install linux-generic &&
+          apt-get -y install kmod &&
+          sudo make -C drivers &&
+          find drivers -name isgx.ko -print

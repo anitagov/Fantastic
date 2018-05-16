@@ -1,19 +1,11 @@
-FROM ubuntu:16.04
+#Dockerfile to build ubuntu-tools:1.2
+FROM anitagov/ubuntu-tools:1.1
 # Create and set working directory to build
 #WORKDIR /build
 #ADD . /build
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && \
-    apt-get -y install git && \
-    apt-get -y install clang-format && \
-    apt-get -y install cmake && \
-    apt-get -y install doxygen && \
-    apt-get -y install gawk && \
-    apt-get -y install gcc && \
-    apt-get -y install g++ && \
-    apt-get -y install libexpat1-dev && \
-    apt-get -y install libssl-dev && \
-    apt-get -y install make && \
-    apt-get -y install openssl && \
-    apt-get -y install subversion && \
+RUN apt-get -y update && \
+    apt-get -y install sudo && \
+    apt-get -y install linux-generic && \
+    apt-get -y install kmod && \
     rm -rf /var/lib/apt/lists/*

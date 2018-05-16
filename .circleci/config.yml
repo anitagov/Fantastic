@@ -1,10 +1,12 @@
 jobs:
   build:
-    docker: 
-      - image: anitagov/ubuntu-tools:1.2
+      machine: 
+      enabled: true
+      image: circleci/classic:latest
     steps:
       - checkout
       - run: | 
+          sudo ./scripts/install.tools &&
           export SHELL=/bin/bash &&
           export shell=/bin/bash &&
           sudo make -C drivers &&

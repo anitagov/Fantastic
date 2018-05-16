@@ -1,8 +1,8 @@
 jobs:
   build:
-      machine: 
-      enabled: true
-      image: circleci/classic:latest
+    machine: 
+       enabled: true
+       image: circleci/classic:latest
     steps:
       - checkout
       - run: | 

@@ -9,5 +9,6 @@ jobs:
           export shell=/bin/bash &&
           apt-get -y update &&
           apt-get -y install sudo &&
-          sudo make -C drivers &&
-          sudo make -C drivers install
+          apt-get -y install linux-generic
+          apt-get -y install kmod
+          sudo make -C drivers

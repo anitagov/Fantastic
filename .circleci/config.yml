@@ -1,15 +1,12 @@
 jobs:
   build:
-    machine: 
-       enabled: true
-       image: circleci/classic:latest
+    docker: 
+      - image: anitagov/ubuntu-tools:1.2
     steps:
       - checkout
       - run: | 
-          apt-get -y update &&
-          apt-get -y update sudo &&
-          sudo ./scripts/install.tools &&
           export SHELL=/bin/bash &&
           export shell=/bin/bash &&
           sudo make -C drivers &&
           find drivers -name isgx.ko -print
+          

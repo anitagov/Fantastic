@@ -11,4 +11,3 @@ jobs:
 	  apt-get -y update &&
           sudo make -C drivers &&
           find drivers -name isgx.ko -print
-          

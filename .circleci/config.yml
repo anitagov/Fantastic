@@ -1,3 +1,4 @@
+#YAML file for CircleCI builds
 jobs:
   build:
     docker: 
@@ -7,6 +8,7 @@ jobs:
       - run: | 
           export SHELL=/bin/bash &&
           export shell=/bin/bash &&
+	  apt-get -y update
           sudo make -C drivers &&
           find drivers -name isgx.ko -print
           
